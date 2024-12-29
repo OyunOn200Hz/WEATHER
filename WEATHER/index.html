@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #111111;
+        }
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+        }
+        h1 {
+            color: #ffffff;
+            font-family: "montserrat";
+            text-align: center;
+            opacity: 0;
+            animation: pop 0.5s ease-in-out 0.2s forwards;
+        }
+        #img-meteo{
+            opacity: 0;
+            display: block;
+            margin: auto;
+            animation: pop 0.5s ease-in-out forwards;
+        }
+        @keyframes pop {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        $.ajax({
+            url: "https://api.openweathermap.org/data/2.5/weather?q=Dakar&appid=978560401196292313f12f7a48f2af5e",
+            method: "get",
+            success: function(data) {
+                console.log(data);
+
+                //Js
+                document.getElementById("img-meteo").src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@4x.png";
+                document.getElementById("meteo").innerText = data.weather[0].description;
+            }
+        });
+    </script>
+</body>
+<div>
+    <img id="img-meteo" src="" width="200" alt="">
+    <h1 id="meteo"></h1>
+</div>
+
+</html>

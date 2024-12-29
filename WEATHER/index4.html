@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MétéoLive</title>
+</head>
+<body>
+    <header>
+        Météo<span>Live</span> 
+        <div class="language-select-container">
+            <select id="language-select">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+                <option value="ru">Русский</option>
+                <option value="zh">中文</option>
+                <option value="pt">Português</option>
+                <option value="ar">العربية</option>
+            </select>
+        </div>
+    </header>
+    <div class="container">
+        <div id="phrase">Votre météo en un clic :<br />Entrez une ville,<br />découvrez son <span>ciel</span></div>
+        <h1 id="villeaffiche"></h1>
+        <img id="img-meteo" src="" width="200" alt="">
+        <h1 id="meteo"></h1>
+        <h2 id="temperature"></h2>
+        <h2 id="humidity"></h2>
+        <h2 id="wind"></h2>
+        <div class="search-bar">
+            <input type="text" id="city-input" placeholder="Entrer une ville">
+            <button id="search-button">Rechercher</button>
+        </div>
+        <div class="predefined-cities">
+            <button class="predefined-city">Paris</button>
+            <button class="predefined-city">New York</button>
+            <button class="predefined-city">Tokyo</button>
+            <button class="predefined-city">Berlin</button>
+            <button class="predefined-city">Madrid</button>
+            <button class="predefined-city">Lisbonne</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
