@@ -179,5 +179,3 @@ document.querySelectorAll(".predefined-city").forEach(button => {
         document.getElementById("phrase").style.display = "none";
     });
 });
-
-// Fetch weather for default city (Paris) on page load
