@@ -154,8 +154,8 @@ span {
     border-radius: 5px;
     width: 60%;
     justify-content: space-between;
-    gap: 2px; /* Reduced space between buttons */
-    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    gap: 2px;
+    flex-wrap: wrap;
 }
 
 .predefined-cities button {
@@ -164,13 +164,13 @@ span {
     color: white;
     border: none;
     padding: 5px;
-    margin: 2px 0; /* Reduced margin */
+    margin: 2px 0;
     cursor: pointer;
     border-radius: 3px;
     text-align: center;
-    font-size: 1.2rem; /* Increased text size */
-    flex: 1 1 auto; /* Allow buttons to grow and shrink */
-    min-width: 100px; /* Ensure a minimum width for buttons */
+    font-size: 1.2rem; 
+    flex: 1 1 auto; 
+    min-width: 100px; 
 }
 
 .predefined-cities button:hover {
